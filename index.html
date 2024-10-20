@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עמוד מוצר</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="product-details">
+            <h2>BUY 300 PAY 200</h2>
+            <p>קערת אקריל מרובעת</p>
+            <p class="price">₪79.90</p>
+
+            <div class="item-selection">
+                <label for="item">פריט:</label>
+                <div class="custom-select small-dropdown">
+                    <select id="item">
+                        <option value="bowl">קערה</option>
+                        <option value="plate">צלחת</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="color-options">
+                <p>צבע פריט: <span id="selectedColor">אדום</span></p>
+                <div class="color-option" onclick="changeColor('https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/2/022680520099-1-163446108385290.jpg', 'אדום')">
+                    <img src="https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/2/022680520099-1-163446108385290.jpg" alt="צבע 1">
+                </div>
+                <div class="color-option" onclick="changeColor('https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/2/022680020099-1-163446108371647.jpg', 'שחור')">
+                    <img src="https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/2/022680020099-1-163446108371647.jpg" alt="צבע 2">
+                </div>
+                <div class="color-option" onclick="changeColor('https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/1/018859010099-1-161942626699286.jpg', 'לבן')">
+                    <img src="https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/1/018859010099-1-161942626699286.jpg" alt="צבע 3">
+                </div>
+            </div>
+
+            <div class="quantity">
+                <label for="quantity">כמות:</label>
+                <div class="custom-select small-dropdown">
+                    <select id="quantity" class="input-select qty" aria-label="בחירת כמות מוצר">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="add-to-cart-button">הוספה לסל</button>
+
+            <div class="extra-buttons">
+                <button class="extra-button gray-button">
+                    <span>DREAM CARD חברי מועדון</span>
+                    <p>בקנייה זו ניתן לצבור 8-3 נקודות</p>
+                </button>
+                <button class="extra-button blue-button">
+                    <span>★ DREAMCARDVIP</span>
+                    <p>בקנייה זו ניתן לצבור 10-3 נקודות</p>
+                </button>
+                <button class="extra-button pink-button">
+                    <span>Free Delivery <span class="material-icons">shopping_cart</span></span>
+                    <p>שליח עד הבית חינם בקנייה מעל ₪199</p>
+                </button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button" onclick="toggleTabContent('productInfo')">
+                    <span class="tab-label">מידע על המוצר</span>
+                    <span class="tab-icon">+</span>
+                </button>
+                <div id="productInfo" class="tab-content">
+                    <p>קערית אקריל מרובעת רב שימושית. לשימוש יומיומי בשולחן<br> האוכל <br>מתאימה להגשת תבשילים וסלטים . צבע פנימי לבן וצבע<br> חיצוני אדום</p>
+                </div>
+
+                <button class="tab-button" onclick="toggleTabContent('additionalInfo')">
+                    <span class="tab-label">נתונים נוספים</span>
+                    <span class="tab-icon">+</span>
+                </button>
+                <div id="additionalInfo" class="tab-content">
+                    <p>נתונים נוספים.</p>
+                </div>
+
+                <button class="tab-button" onclick="toggleTabContent('shippingInfo')">
+                    <span class="tab-label">הוראות שילוח</span>
+                    <span class="tab-icon">+</span>
+                </button>
+                <div id="shippingInfo" class="tab-content">
+                    <p> הוראות שילוח.</p>
+                </div>
+            </div>
+        </div>
+        <div class="product-image">
+            <img id="mainImage" src="https://www.foxhome.co.il/pub/media/catalog/product/cache/f55597eec9dc3d2f03f66d15592e1117/0/2/022680520099-1-163446108385290.jpg" alt="מוצר">
+            <div class="favorite-icon" onclick="toggleFavorite()">
+                <span class="material-icons" id="favoriteIcon">favorite_border</span>
+            </div>
+            <div class="share-icon">
+                <span class="material-icons">share</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
